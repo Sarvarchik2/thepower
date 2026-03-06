@@ -1,18 +1,20 @@
 <template>
   <div class="layout-wrapper">
     <header :class="['header', { 'scrolled': isScrolled }]">
-      <div class="container header-container">
-        <div class="logo">
-          <span class="logo-text">The <span class="logo-accent">Powers</span></span>
-        </div>
-        <nav class="nav">
-          <NuxtLink to="/#solutions" class="nav-link">Solutions</NuxtLink>
-          <NuxtLink to="/#market" class="nav-link">Market</NuxtLink>
-          <NuxtLink to="/#partners" class="nav-link">Partners</NuxtLink>
-          <NuxtLink to="/api-docs" class="nav-link">API Docs</NuxtLink>
-        </nav>
-        <div class="header-action">
-          <NuxtLink to="/#contact" class="btn btn-primary btn-sm">Partner with us</NuxtLink>
+      <div class="container">
+        <div class="header-pill">
+          <div class="logo">
+            <span class="logo-text">ThePowers</span>
+          </div>
+          <nav class="nav">
+            <NuxtLink to="/#solutions" class="nav-link">Products</NuxtLink>
+            <NuxtLink to="/#market" class="nav-link">Solutions</NuxtLink>
+            <NuxtLink to="/#partners" class="nav-link">Partners</NuxtLink>
+            <NuxtLink to="/#contact" class="nav-link">Resources</NuxtLink>
+          </nav>
+          <div class="header-action">
+            <NuxtLink to="/#contact" class="btn btn-primary btn-sm">Partner Details</NuxtLink>
+          </div>
         </div>
       </div>
     </header>
@@ -25,7 +27,7 @@
       <div class="container footer-container">
         <div class="footer-brand">
           <div class="logo">
-            <span class="logo-text">The <span class="logo-accent">Powers</span></span>
+            <span class="logo-text">ThePowers</span>
           </div>
           <p class="copyright">&copy; 2026 The Powers Infrastructure.</p>
         </div>
@@ -45,7 +47,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const isScrolled = ref(false)
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50
+  isScrolled.value = window.scrollY > 10
 }
 
 onMounted(() => {
@@ -66,39 +68,32 @@ onUnmounted(() => {
 
 .header {
   position: fixed;
-  top: 0;
+  top: 16px;
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
-  padding: 20px 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .header.scrolled {
-  padding: 15px 0;
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  top: 8px;
 }
 
-.header-container {
+.header-pill {
+  background-color: var(--color-dark);
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .logo-text {
   font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--color-text-dark);
-}
-
-.logo-accent {
-  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: #fff;
 }
 
 .nav {
@@ -109,17 +104,48 @@ onUnmounted(() => {
 .nav-link {
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.router-link-active {
-  color: var(--color-text-dark);
+  color: #fff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.nav-link:hover::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  opacity: 1;
 }
 
 .btn-sm {
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.btn-sm:hover {
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: none;
+  transform: none;
 }
 
 .main-content {
@@ -129,7 +155,7 @@ onUnmounted(() => {
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 60px 0 40px;
+  padding: 80px 0 40px;
 }
 
 .footer-container {
@@ -140,36 +166,30 @@ onUnmounted(() => {
   gap: 24px;
 }
 
-.logo-text {
-  color: inherit;
-}
-
 .copyright {
   margin-top: 10px;
-  color: #888;
+  color: #666;
   font-size: 0.9rem;
 }
 
 .footer-links {
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 .footer-link {
   color: #888;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .footer-link:hover {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav {
     display: none;
-  }
-  .header-container {
-    padding: 0 16px;
   }
 }
 </style>

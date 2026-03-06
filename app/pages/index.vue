@@ -1,80 +1,125 @@
 <template>
   <div class="landing-page">
     <!-- Hero Section -->
-    <section class="hero b-section">
+    <section class="hero">
       <div class="container hero-container">
-        <div class="hero-content" ref="heroContent">
-          <h1 class="hero-title">Your Gateway to the <br><span class="text-primary">Uzbek Gaming Market</span>.</h1>
-          <p class="hero-subtitle">Unified payment infrastructure and API routing for global digital entertainment. Reach 40M+ users through local payment networks.</p>
-          <div class="hero-actions">
-            <NuxtLink to="/#contact" class="btn btn-primary btn-lg">Get in touch</NuxtLink>
-            <NuxtLink to="/api-docs" class="btn btn-outline btn-lg">View API Docs</NuxtLink>
-          </div>
+        <div class="hero-content gsap-reveal">
+          <h1 class="hero-title">
+            <span class="text-dark">Your Gateway to the</span>
+            <br>
+            <span class="text-accent">Uzbek Gaming Market</span>
+          </h1>
         </div>
-        <div class="hero-visual" ref="heroVisual">
-          <div class="abstract-shape shape-1"></div>
-          <div class="abstract-shape shape-2"></div>
-          <div class="abstract-shape shape-3"></div>
+        
+        <div class="hero-card gsap-reveal">
+          <div class="hero-card-left">
+            <h2 class="card-headline">The perfect infrastructure for the <br><strong>new era of gaming payments.</strong></h2>
+            <p class="subtitle">Unified infrastructure and API routing for global digital entertainment. Reach 40M+ users through local payment networks.</p>
+            <div class="hero-actions">
+              <NuxtLink to="/#contact" class="btn btn-primary">Start integrating</NuxtLink>
+              <NuxtLink to="/#contact" class="btn btn-outline-light">Docs</NuxtLink>
+            </div>
+          </div>
+          <div class="hero-card-right">
+            <!-- Mockup phone / graphic representation -->
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="top-bar">
+                  <span>9:30</span>
+                  <div class="icons">
+                    <span>📶</span><span>🔋</span>
+                  </div>
+                </div>
+                <div class="game-store">
+                  <h4>Store</h4>
+                  <div class="offer-card">
+                    <div class="gem-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"></polygon><polygon points="12 22 18 3 12 9 6 3"></polygon><polygon points="2 9 12 9 22 9"></polygon></svg>
+                    </div>
+                    <span class="badge badge-green">Welcome offer</span>
+                    <button class="buy-btn">$39.99 <span>Pay with ThePowers</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Trust & Traction Section -->
-    <section id="partners" class="trust b-section bg-alt gsap-reveal">
+    <section id="partners" class="trust gsap-reveal">
       <div class="container">
-        <p class="trust-subtitle">Trusted by industry leaders & powered by top-tier banking.</p>
+        <p class="trust-subtitle">Trusted by industry leaders</p>
         <div class="trust-logos">
           <span class="logo-placeholder">Tencent</span>
           <span class="logo-placeholder">Xsolla</span>
           <span class="logo-placeholder">Octobank</span>
+          <span class="logo-placeholder">Epic Games</span>
+          <span class="logo-placeholder">Steam</span>
+          <span class="logo-placeholder">PUBG</span>
+          <span class="logo-placeholder">Valve</span>
         </div>
       </div>
     </section>
 
     <!-- The Market Opportunity -->
-    <section id="market" class="market b-section gsap-reveal">
+    <section id="market" class="market gsap-reveal section">
       <div class="container">
-        <h2 class="section-title">Unlocking a <span class="text-primary">$150M+</span> Market</h2>
+        <h2 class="section-title">Explore our <br>latest metrics</h2>
         <div class="grid cards-3">
           <div class="metric-card">
+            <div class="metric-badge">Market</div>
             <h3 class="metric-value">40M</h3>
             <p class="metric-label">Population</p>
-            <p class="metric-desc">Young & digital-first demographic.</p>
+            <p class="metric-desc">Young & digital-first demographic ready to spend.</p>
           </div>
-          <div class="metric-card">
-            <h3 class="metric-value">16M+</h3>
+          <div class="metric-card dark-card">
+            <div class="metric-badge">Audience</div>
+            <h3 class="metric-value text-green">16M+</h3>
             <p class="metric-label">Active Gamers</p>
-            <p class="metric-desc">Rapidly expanding gaming community.</p>
+            <p class="metric-desc">Rapidly expanding gaming community in the region.</p>
           </div>
           <div class="metric-card">
+            <div class="metric-badge">Coverage</div>
             <h3 class="metric-value">93%</h3>
             <p class="metric-label">Local Cards</p>
-            <p class="metric-desc">UZCARD/HUMO — unsupported by global gateways.</p>
+            <p class="metric-desc">UZCARD & HUMO — unsupported by global gateways.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Core Solutions -->
-    <section id="solutions" class="solutions b-section bg-alt gsap-reveal">
+    <section id="solutions" class="solutions section bg-alt">
       <div class="container">
-        <h2 class="section-title">Seamless Integration Models</h2>
+        <h2 class="section-title text-center">Seamless Solutions</h2>
         <div class="grid cards-2">
           
-          <div class="solution-card">
-            <div class="solution-icon-wrapper">
-              <div class="icon-3d gear-icon">⚙️</div>
+          <div class="xcard xcard-light gsap-reveal">
+            <div class="xcard-badge"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></span> API</div>
+            <h3 class="xcard-title">Kiosk API <br>(Direct Top-Up)</h3>
+            <p class="xcard-desc">Real-time server-to-server balance funding directly via local e-wallets and cash networks.</p>
+            <div class="xcard-actions">
+              <NuxtLink to="/#contact" class="fake-link">Integration guide &rarr;</NuxtLink>
             </div>
-            <h3 class="solution-title">Kiosk API (Direct Top-Up)</h3>
-            <p class="solution-desc">Real-time server-to-server balance funding directly via local e-wallets and cash networks.</p>
+            <!-- decorative floating element -->
+            <div class="floating-el el-1">
+              <div class="pill3d">Server Integration</div>
+            </div>
           </div>
 
-          <div class="solution-card">
-            <div class="solution-icon-wrapper">
-              <div class="icon-3d card-icon">💳</div>
+          <div class="xcard xcard-dark gsap-reveal">
+            <div class="xcard-badge"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></span> SDK</div>
+            <h3 class="xcard-title">Hosted Checkout <br>(E-Commerce)</h3>
+            <p class="xcard-desc">Storefront integration allowing users to purchase content via local payment methods with automated USD/EUR settlement.</p>
+            <div class="xcard-actions">
+              <NuxtLink to="/#contact" class="fake-link text-white">View demo &rarr;</NuxtLink>
             </div>
-            <h3 class="solution-title">Hosted Checkout (E-Commerce)</h3>
-            <p class="solution-desc">Storefront integration allowing users to purchase content via local payment methods with automated USD/EUR settlement.</p>
+            <!-- decorative floating element -->
+            <div class="floating-el el-2">
+              <div class="pill3d pill-green">Download SDK</div>
+            </div>
           </div>
 
         </div>
@@ -82,93 +127,197 @@
     </section>
 
     <!-- Why The Powers? -->
-    <section class="features b-section gsap-reveal">
+    <section class="features section">
       <div class="container">
-        <h2 class="section-title">Enterprise Infrastructure</h2>
-        <div class="grid cards-4">
-          <div class="feature-card">
-            <h4 class="feature-title">Full Local Coverage</h4>
-            <p class="feature-desc">UZCARD, HUMO, Visa, Mastercard processing in a single API.</p>
+        <h2 class="section-title text-center">Enterprise level <br>Infrastructure</h2>
+        <div class="grid cards-2">
+          <div class="feature-card-detailed gsap-reveal">
+            <div class="f-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h4 class="feature-title-large">Full Local Coverage</h4>
+            <p class="feature-desc-large">Connect to 100% of the paying audience in Uzbekistan with a single integration. We provide direct access to the most popular payment methods, ensuring you never miss a sale due to checkout friction.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> UZCARD & HUMO native support</li>
+              <li><span class="check">✓</span> Visa & Mastercard local acquiring</li>
+              <li><span class="check">✓</span> Digital wallets (Click, Payme, Uzum)</li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <h4 class="feature-title">Automated Settlements</h4>
-            <p class="feature-desc">Real-time UZS to USD/EUR conversion with transparent rates.</p>
+          <div class="feature-card-detailed gsap-reveal">
+            <div class="f-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" x2="21" y1="14" y2="3"></line><polyline points="8 21 3 21 3 16"></polyline><line x1="20" x2="3" y1="10" y2="21"></line></svg>
+            </div>
+            <h4 class="feature-title-large">Instant Cross-Border Settlements</h4>
+            <p class="feature-desc-large">Eliminate currency risk and receive your funds faster. Our infrastructure automatically handles local currency conversion, settling your balance in USD or EUR seamlessly.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> Automated UZS to USD/EUR conversion</li>
+              <li><span class="check">✓</span> Transparent & fixed FX rates</li>
+              <li><span class="check">✓</span> Flexible payout schedules</li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <h4 class="feature-title">Ready for Scale</h4>
-            <p class="feature-desc">Built to seamlessly plug into offline terminal networks and digital wallets.</p>
+          <div class="feature-card-detailed gsap-reveal">
+            <div class="f-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h4 class="feature-title-large">Built for Scale & Reliability</h4>
+            <p class="feature-desc-large">An API-first platform architected to handle massive transaction volumes from game launches or viral events without breaking a sweat. Seamlessly plug into the ecosystem.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> 99.99% Guaranteed API uptime</li>
+              <li><span class="check">✓</span> RESTful JSON APIs & Webhooks</li>
+              <li><span class="check">✓</span> Comprehensive developer SDKs</li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <h4 class="feature-title">100% Compliant</h4>
-            <p class="feature-desc">PCI DSS standard, 3D-Secure, robust zero-fraud monitoring.</p>
+          <div class="feature-card-detailed gsap-reveal">
+            <div class="f-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h4 class="feature-title-large">Enterprise-Grade Security</h4>
+            <p class="feature-desc-large">Focus on growing your game while we handle local financial regulations, tax compliance, and robust fraud prevention across all your transactions.</p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span> Fully PCI DSS Level 1 certified</li>
+              <li><span class="check">✓</span> AI-powered advanced anti-fraud</li>
+              <li><span class="check">✓</span> Automated AML & KYC checks</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Lead Form / Contact -->
-    <section id="contact" class="contact b-section bg-dark gsap-reveal">
-      <div class="container contact-container">
-        <div class="contact-header">
-          <h2 class="contact-title">Ready to scale your presence in Central Asia?</h2>
-          <p class="contact-subtitle">Get directly in touch with our partnerships team or email us at <br><a href="mailto:partners@thepowers.uz" class="text-primary">partners@thepowers.uz</a></p>
-        </div>
-        
-        <div class="contact-form-card">
-          <form class="lead-form" @submit.prevent="submitForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" required placeholder="John" />
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="contact-box gsap-reveal">
+          <div class="contact-left">
+            <h2 class="contact-title">Ready to scale your presence?</h2>
+            <p class="contact-subtitle">Get directly in touch with our partnerships team to launch your game in Central Asia.</p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <p><strong>Headquarters</strong><br>Elbek str. 24, Tashkent,<br>Uzbekistan, 100000</p>
               </div>
-              <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" required placeholder="Doe" />
+              <div class="contact-item mt-4">
+                <p><strong>Email</strong><br><a href="mailto:info@thepower.uz">info@thepower.uz</a></p>
+              </div>
+              <div class="contact-item mt-4">
+                <p><strong>Phone</strong><br><a href="tel:+998981888888">+998 98 188 88 88</a></p>
               </div>
             </div>
-            <div class="form-group">
-              <label for="email">Work Email</label>
-              <input type="email" id="email" required placeholder="john@company.com" />
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" required placeholder="Company Name" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
-          </form>
+          </div>
+          
+          <div class="contact-right">
+            <form class="lead-form" @submit.prevent="submitForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="fname" required placeholder="First Name" v-model="form.fname" />
+                </div>
+                <div class="form-group">
+                  <input type="text" id="lname" required placeholder="Last Name" v-model="form.lname" />
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" required placeholder="Work Email" v-model="form.email" />
+              </div>
+              <div class="form-group">
+                <input type="text" id="company" required placeholder="Company Name" v-model="form.company" />
+              </div>
+              <div class="form-group">
+                <textarea id="message" rows="4" placeholder="Tell us about your needs..." required v-model="form.message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-full" :disabled="isLoading">
+                {{ isLoading ? 'Sending...' : 'Submit Request' }}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Custom Toast Alert -->
+    <div :class="['custom-toast', { 'toast-visible': showToast, 'toast-error': toastType === 'error' }]">
+      <div class="toast-icon">
+        <svg v-if="toastType === 'success'" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      </div>
+      <div class="toast-content">
+        <h4>{{ toastTitle }}</h4>
+        <p>{{ toastMessage }}</p>
+      </div>
+      <button class="toast-close" @click="closeToast">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+      </button>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const submitForm = () => {
-  // Demo submission
-  alert('Thank you! Your request has been sent to our partnerships team.')
+const form = ref({
+  fname: '',
+  lname: '',
+  email: '',
+  company: '',
+  message: ''
+})
+
+const isLoading = ref(false)
+
+// Toast Alert State
+const showToast = ref(false)
+const toastType = ref('success')
+const toastTitle = ref('')
+const toastMessage = ref('')
+let toastTimer = null
+
+const displayToast = (type, title, message) => {
+  toastType.value = type
+  toastTitle.value = title
+  toastMessage.value = message
+  showToast.value = true
+  
+  if (toastTimer) clearTimeout(toastTimer)
+  toastTimer = setTimeout(() => {
+    closeToast()
+  }, 5000)
+}
+
+const closeToast = () => {
+  showToast.value = false
+}
+
+const submitForm = async () => {
+  isLoading.value = true
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: form.value
+    })
+    displayToast('success', 'Request Sent!', 'Thank you! Your request has been sent to our partnerships team.')
+    form.value = { fname: '', lname: '', email: '', company: '', message: '' }
+  } catch (error) {
+    displayToast('error', 'Error', 'Failed to send request. Please try again later.')
+    console.error(error)
+  } finally {
+    isLoading.value = false
+  }
 }
 
 onMounted(() => {
   const tl = gsap.timeline()
   
-  tl.fromTo('.hero-title', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-    .fromTo('.hero-subtitle', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-    .fromTo('.hero-actions', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-    .fromTo('.abstract-shape', { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 1, stagger: 0.1, ease: 'back.out(1.7)' }, '-=0.8')
+  tl.fromTo('.hero-title span', 
+      { y: 50, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power4.out' })
+    .fromTo('.hero-card', 
+      { y: 40, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.4')
 
   gsap.utils.toArray('.gsap-reveal').forEach(section => {
     gsap.fromTo(section, 
-      { y: 50, opacity: 0 },
+      { y: 40, opacity: 0 },
       {
         y: 0, 
         opacity: 1,
@@ -176,7 +325,7 @@ onMounted(() => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: section,
-          start: 'top 80%',
+          start: 'top 85%',
         }
       }
     )
@@ -185,52 +334,65 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.text-primary {
-  color: var(--color-primary);
-}
-
-.b-section {
-  padding: 120px 0;
-}
-
-.bg-alt {
-  background-color: var(--color-bg-alt);
-}
-
-.bg-dark {
-  background-color: #0b0b0b;
-  color: #fff;
-}
-
-/* Hero Section */
+/* Hero Typography */
 .hero {
-  padding-top: 180px;
-  padding-bottom: 120px;
-  overflow: hidden;
-}
-
-.hero-container {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-
-.hero-content {
-  flex: 1;
-  max-width: 700px;
+  padding-top: 160px;
+  padding-bottom: 60px;
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  text-align: center;
+  font-size: 5.5rem;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  margin-bottom: 60px;
+}
+
+.text-dark {
+  color: var(--color-text-dark);
+}
+
+.text-accent {
+  color: var(--color-text-accent);
+}
+
+/* Xsolla-esque Hero Card */
+.hero-card {
+  background-color: #0b1c11; /* Deep green */
+  background-image: linear-gradient(135deg, #0b1c11 0%, #061109 100%);
+  border-radius: var(--radius-xl);
+  display: flex;
+  overflow: hidden;
+  color: #fff;
+  min-height: 500px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-card-left {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-headline {
+  font-size: 3rem;
+  color: rgba(255,255,255,0.7);
   letter-spacing: -0.04em;
   margin-bottom: 24px;
 }
 
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: var(--color-text-muted);
+.card-headline strong {
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
   margin-bottom: 40px;
-  max-width: 600px;
+  max-width: 450px;
+  line-height: 1.6;
 }
 
 .hero-actions {
@@ -238,64 +400,128 @@ onMounted(() => {
   gap: 16px;
 }
 
-.btn-lg {
-  padding: 16px 36px;
-  font-size: 1.1rem;
-}
-
-.hero-visual {
-  flex: 1;
-  position: relative;
-  height: 500px;
-  display: flex;
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.hero-card-right {
+  flex: 0.8;
+  position: relative;
+  background: radial-gradient(circle at center, rgba(2, 197, 35, 0.2) 0%, transparent 70%);
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
+  padding-top: 60px;
 }
 
-.abstract-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  z-index: -1;
+/* Phone Mockup */
+.phone-mockup {
+  width: 280px;
+  height: 90%;
+  background: #000;
+  border-radius: 40px 40px 0 0;
+  border: 8px solid #1a2a1f;
+  border-bottom: none;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 
-.shape-1 {
-  width: 300px;
-  height: 300px;
-  background: rgba(2, 197, 35, 0.2);
-  top: 10%;
-  left: 10%;
+.phone-screen {
+  background: linear-gradient(180deg, #184223 0%, #0b1f11 100%);
+  width: 100%;
+  height: 100%;
+  padding: 20px 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
-.shape-2 {
-  width: 250px;
-  height: 250px;
-  background: rgba(0, 0, 0, 0.05);
-  bottom: 10%;
-  right: 20%;
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
-.shape-3 {
-  width: 200px;
-  height: 200px;
-  background: rgba(2, 197, 35, 0.1);
-  top: 40%;
-  left: 40%;
+.game-store h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.offer-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.gem-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 20px rgba(2,197,35,0.5));
+}
+
+.badge-green {
+  background: #02c523;
+  border-radius: 50px;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.buy-btn span {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #eee;
 }
 
 /* Trust Section */
 .trust {
-  padding: 60px 0;
+  padding: 40px 0 80px;
   text-align: center;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .trust-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   margin-bottom: 30px;
-  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 .trust-logos {
@@ -303,162 +529,325 @@ onMounted(() => {
   justify-content: center;
   gap: 60px;
   align-items: center;
-  opacity: 0.6;
+  opacity: 0.4;
+  flex-wrap: wrap;
 }
 
 .logo-placeholder {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: var(--color-text-dark);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
-/* Grid Utilities */
+/* Grid Layouts */
 .grid {
   display: grid;
-  gap: 30px;
+  gap: 24px;
 }
 .cards-3 { grid-template-columns: repeat(3, 1fr); }
-.cards-2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
 .cards-4 { grid-template-columns: repeat(4, 1fr); }
 
-/* Metric Card */
+/* Metics & Normal Cards */
 .metric-card {
   background: #fff;
   padding: 40px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.dark-card {
+  background: var(--color-dark);
+  color: #fff;
+  border: none;
+}
+
+.dark-card .metric-label, .dark-card .metric-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+.metric-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--color-bg-alt);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.dark-card .metric-badge {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
 }
 
 .metric-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-md);
 }
 
 .metric-value {
-  font-size: 3.5rem;
-  color: var(--color-primary);
-  margin-bottom: 8px;
-  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 12px;
+}
+
+.text-green {
+  color: #02e028;
 }
 
 .metric-label {
   font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .metric-desc {
   color: var(--color-text-muted);
 }
 
-/* Solution Card */
-.solution-card {
-  background: #fff;
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+/* Xcards (Solutions) */
+.bg-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.xcard {
+  padding: 60px;
+  border-radius: var(--radius-xl);
   position: relative;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
+  min-height: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.solution-card:hover {
-  transform: translateY(-10px);
   box-shadow: var(--shadow-md);
-  border-color: var(--color-primary);
+  overflow: hidden;
 }
 
-.solution-icon-wrapper {
-  background-color: var(--color-bg-alt);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
+.xcard-light {
+  background: #fff;
+}
+
+.xcard-dark {
+  background: #111;
+  color: #fff;
+  background-image: radial-gradient(circle at top right, rgba(2, 197, 35, 0.15), transparent 60%);
+}
+
+.xcard-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  align-self: flex-start;
 }
 
-.icon-3d {
+.xcard-dark .xcard-badge {
+  background: rgba(255,255,255,0.1);
+}
+
+.xcard-title {
   font-size: 2.5rem;
-}
-
-.solution-title {
-  font-size: 1.5rem;
   margin-bottom: 16px;
 }
 
-.solution-desc {
-  color: var(--color-text-muted);
-}
-
-/* Feature Card */
-.feature-card {
-  padding: 30px;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius-md);
-}
-
-.feature-title {
+.xcard-desc {
   font-size: 1.1rem;
-  margin-bottom: 12px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.feature-title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-}
-
-.feature-desc {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
-}
-
-/* Contact Section */
-.contact-container {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-}
-
-.contact-header {
+  max-width: 80%;
+  margin-bottom: 40px;
   flex: 1;
+}
+
+.xcard-dark .xcard-desc {
+  color: rgba(255,255,255,0.6);
+}
+
+.fake-link {
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.text-white {
+  color: #fff;
+}
+
+/* Floating 3D Pills */
+.floating-el {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.pill3d {
+  background: #fff;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2), 
+              inset 0 -4px 10px rgba(0,0,0,0.05),
+              inset 0 4px 10px rgba(255,255,255,1);
+  transform: perspective(400px) rotateX(10deg) rotateY(-10deg);
+  transition: transform 0.3s ease;
+  color: #111;
+}
+
+.pill-green {
+  background: linear-gradient(135deg, #02e028 0%, #02a31d 100%);
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(2, 197, 35, 0.4),
+              inset 0 -4px 10px rgba(0,0,0,0.1),
+              inset 0 4px 10px rgba(255,255,255,0.4);
+}
+
+.xcard:hover .pill3d {
+  transform: perspective(400px) rotateX(0) rotateY(0) translateY(-10px);
+}
+
+/* Detailed Feature Cards */
+.feature-card-detailed {
+  padding: 50px 40px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.feature-card-detailed:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  border-color: rgba(2, 197, 35, 0.3);
+}
+
+.f-icon-box {
+  width: 64px;
+  height: 64px;
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.feature-title-large {
+  font-size: 1.7rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.feature-desc-large {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.check {
+  color: var(--color-primary);
+  font-weight: 800;
+  background: rgba(2, 197, 35, 0.1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+/* Contact Block */
+.contact-box {
+  background: var(--color-dark);
+  border-radius: var(--radius-xl);
+  display: flex;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-left {
+  flex: 1;
+  padding: 80px 60px;
+  background-image: radial-gradient(circle at bottom left, rgba(2, 197, 35, 0.2), transparent 50%);
 }
 
 .contact-title {
   font-size: 3rem;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .contact-subtitle {
   font-size: 1.1rem;
-  color: #aaa;
-  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
 }
 
-.contact-form-card {
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+}
+
+.contact-info strong {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.contact-info a {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-info a:hover {
+  color: var(--color-primary-hover);
+}
+
+.contact-right {
   flex: 1;
-  background-color: #1a1a1a;
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  max-width: 500px;
+  padding: 80px 60px;
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+}
+
+.lead-form {
   width: 100%;
 }
 
@@ -468,25 +857,16 @@ onMounted(() => {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   flex: 1;
-}
-
-label {
-  display: block;
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 input, textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 16px 20px;
   border-radius: var(--radius-sm);
-  background-color: #2a2a2a;
-  border: 1px solid #333;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   color: #fff;
   font-family: var(--font-main);
   font-size: 1rem;
@@ -496,50 +876,132 @@ input, textarea {
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  background-color: #333;
+  background-color: rgba(255,255,255,0.1);
 }
 
 input::placeholder, textarea::placeholder {
-  color: #555;
+  color: rgba(255,255,255,0.4);
 }
 
-.btn-block {
+.w-full {
   width: 100%;
-  padding: 18px;
-  font-size: 1.1rem;
 }
 
 @media (max-width: 1024px) {
-  .hero-container {
+  .hero-card {
     flex-direction: column;
-    text-align: center;
   }
-  .hero-actions {
-    justify-content: center;
+  .hero-card-left {
+    padding: 60px 40px;
   }
-  .hero-visual {
+  .hero-card-right {
     height: 300px;
   }
-  .grid.cards-3 {
-    grid-template-columns: 1fr;
-  }
-  .grid.cards-2 {
-    grid-template-columns: 1fr;
-  }
-  .grid.cards-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .contact-container {
+  .contact-box {
     flex-direction: column;
+  }
+  .contact-left, .contact-right {
+    padding: 60px 40px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
-  .grid.cards-4 {
+  .card-headline {
+    font-size: 2.2rem;
+  }
+  .grid.cards-3, .grid.cards-2, .grid.cards-4 {
     grid-template-columns: 1fr;
   }
+  .xcard {
+    padding: 40px 30px;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .custom-toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+/* Custom Toast Alert */
+.custom-toast {
+  position: fixed;
+  bottom: -100px;
+  right: 32px;
+  background: var(--color-dark);
+  color: #fff;
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 9999;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 1px solid rgba(255,255,255,0.1);
+  min-width: 300px;
+  max-width: 450px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-toast.toast-visible {
+  bottom: 32px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(2, 197, 35, 0.2);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.toast-error .toast-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-content h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.toast-content p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.toast-close:hover {
+  color: #fff;
 }
 </style>
