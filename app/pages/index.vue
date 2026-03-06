@@ -201,7 +201,7 @@
                 <p><strong>{{ $t('contact.phone') }}</strong><br><a href="tel:+998981888888">+998 98 188 88 88</a></p>
               </div>
               <div class="contact-item mt-4">
-                <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/company/the-power-uz/?viewAsMember=true" target="_blank" rel="noopener noreferrer">The Power UZ</a></p>
+                <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/company/the-power-uz/?viewAsMember=true" target="_blank" rel="noopener noreferrer">The Power</a></p>
               </div>
             </div>
           </div>
@@ -913,10 +913,21 @@ input::placeholder, textarea::placeholder {
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    word-break: break-word;
   }
   .card-headline {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-card-left {
+    padding: 40px 24px;
   }
   .grid.cards-3, .grid.cards-2, .grid.cards-4 {
     grid-template-columns: 1fr;
@@ -931,6 +942,37 @@ input::placeholder, textarea::placeholder {
     left: 16px;
     right: 16px;
     bottom: 16px;
+  }
+  .contact-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .card-headline {
+    font-size: 1.5rem;
+  }
+  .hero-card-left {
+    padding: 30px 20px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .trust-logos {
+    gap: 24px;
+  }
+  .logo-placeholder {
+    font-size: 1.2rem;
+  }
+  .contact-title {
+    font-size: 2rem;
+    word-break: break-word;
+  }
+  .contact-left, .contact-right {
+    padding: 40px 20px;
   }
 }
 

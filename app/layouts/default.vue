@@ -4,7 +4,9 @@
       <div class="container">
         <div class="header-pill">
           <div class="logo">
-            <span class="logo-text">ThePowers</span>
+            <NuxtLink :to="localePath('/')">
+              <img src="/logo.png" alt="The Power Logo" class="brand-logo" />
+            </NuxtLink>
           </div>
           <nav class="nav">
             <NuxtLink :to="localePath('/#solutions')" class="nav-link">{{ $t('nav.products') }}</NuxtLink>
@@ -44,7 +46,9 @@
       <div class="container footer-container">
         <div class="footer-brand">
           <div class="logo">
-            <span class="logo-text">ThePower</span>
+            <NuxtLink :to="localePath('/')">
+              <img src="/logo.png" alt="The Power Logo" class="brand-logo footer-logo" />
+            </NuxtLink>
           </div>
           <p class="copyright">{{ $t('footer.copyright') }}</p>
           <div class="social-links">
@@ -124,20 +128,25 @@ onUnmounted(() => {
 }
 
 .header-pill {
-  background-color: var(--color-dark);
+  background-color: #ffffff;
   border-radius: var(--radius-md);
   padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  color: #fff;
+.brand-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo {
+  height: 56px;
+  /* Keep footer logo white since footer is dark */
+  filter: brightness(0) invert(1);
 }
 
 .nav {
@@ -148,15 +157,12 @@ onUnmounted(() => {
 .nav-link {
   font-weight: 500;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.7);
+  color: var(--color-text-dark);
   position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.router-link-active {
-  color: #fff;
-}
+
 
 .nav-link::after {
   content: '';
@@ -166,14 +172,14 @@ onUnmounted(() => {
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .nav-link:hover::after {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2302c523" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
   opacity: 1;
 }
 
@@ -181,15 +187,16 @@ onUnmounted(() => {
   padding: 10px 24px;
   font-size: 0.95rem;
   font-weight: 600;
-  background-color: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
+  background-color: var(--color-primary);
+  border: none;
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 .btn-sm:hover {
-  background-color: rgba(255,255,255,0.1);
-  box-shadow: none;
-  transform: none;
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 197, 35, 0.2);
 }
 
 /* Header actions container */
@@ -208,8 +215,8 @@ onUnmounted(() => {
 
 .lang-btn {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-dark);
   padding: 8px 14px;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -222,7 +229,7 @@ onUnmounted(() => {
 }
 
 .lang-btn:hover {
-  background: rgba(2, 197, 35, 0.1);
+  background: rgba(2, 197, 35, 0.05);
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
@@ -231,8 +238,8 @@ onUnmounted(() => {
   position: absolute;
   top: 120%;
   right: 0;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #fff;
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 8px;
   display: flex;
@@ -251,12 +258,12 @@ onUnmounted(() => {
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.9rem;
-  color: #fff;
+  color: var(--color-text-dark);
   transition: all 0.2s ease;
 }
 
 .lang-menu button:hover {
-  background: rgba(255,255,255,0.05);
+  background: var(--color-bg-alt);
   color: var(--color-primary);
 }
 
@@ -332,6 +339,46 @@ onUnmounted(() => {
 @media (max-width: 900px) {
   .nav {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-pill {
+    padding: 10px 16px;
+  }
+  .brand-logo {
+    height: 40px;
+  }
+  .header-action {
+    gap: 10px;
+  }
+  .btn-sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .lang-btn {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-pill {
+    padding: 8px 12px;
+  }
+  .brand-logo {
+    height: 32px;
+  }
+  .header-action {
+    gap: 6px;
+  }
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
   }
 }
 </style>
