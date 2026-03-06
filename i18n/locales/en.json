@@ -99,5 +99,10 @@
         "successMessage": "Thank you! Your request has been sent to our partnerships team.",
         "errorTitle": "Error",
         "errorMessage": "Failed to send request. Please try again later."
+    },
+    "seo": {
+        "title": "The Powers — B2B Payment Infrastructure for Gaming in Uzbekistan",
+        "description": "Enterprise-grade local payment infrastructure and API routing for global digital entertainment. Reach 40M+ users through UZCARD, HUMO, Click, Payme in Central Asia.",
+        "keywords": "payments uzbekistan, game payments, b2b payment gateway, uzcard acquiring, humo payments, click uzbekistan, gaming infrastructure"
     }
 }

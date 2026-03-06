@@ -99,5 +99,10 @@
         "successMessage": "Arizangiz uchun rahmat, tez orada jamoa orqali sizga habar beramiz.",
         "errorTitle": "Xatolik",
         "errorMessage": "So'rov yuborilmadi! Iltimos, qayta urunib ko'ring."
+    },
+    "seo": {
+        "title": "The Powers — O'zbekistonda geyming uchun B2B to'lov infratuzilmasi",
+        "description": "Global raqamli ko'ngilochar uchun yuqori darajadagi yagona to'lov infratuzilmasi va API. UZCARD, HUMO, Click, Payme orqali 40+ mln foydalanuvchini qamrab oling.",
+        "keywords": "to'lovlar o'zbekiston, internet ekvayring uzcard, b2b payment, humo to'lov, click payme api, o'yin to'lovlari The Powers"
     }
 }

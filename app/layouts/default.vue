@@ -105,6 +105,24 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
   window.removeEventListener('click', closeMenu)
 })
+
+// Dynamic SEO tags based on current locale
+const { t } = useI18n()
+useHead({
+  title: () => t('seo.title'),
+  meta: [
+    { name: 'description', content: () => t('seo.description') },
+    { name: 'keywords', content: () => t('seo.keywords') },
+    // Open Graph tags
+    { property: 'og:title', content: () => t('seo.title') },
+    { property: 'og:description', content: () => t('seo.description') },
+    { property: 'og:type', content: 'website' },
+    // Twitter Card tags
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: () => t('seo.title') },
+    { name: 'twitter:description', content: () => t('seo.description') }
+  ]
+})
 </script>
 
 <style scoped>

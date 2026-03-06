@@ -26,11 +26,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'The Powers — B2B Payment Infrastructure',
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Unified payment infrastructure and API routing for global digital entertainment. Reach 40M+ users through local payment networks.' }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
