@@ -7,13 +7,30 @@
             <span class="logo-text">ThePowers</span>
           </div>
           <nav class="nav">
-            <NuxtLink to="/#solutions" class="nav-link">Products</NuxtLink>
-            <NuxtLink to="/#market" class="nav-link">Solutions</NuxtLink>
-            <NuxtLink to="/#partners" class="nav-link">Partners</NuxtLink>
-            <NuxtLink to="/#contact" class="nav-link">Resources</NuxtLink>
+            <NuxtLink :to="localePath('/#solutions')" class="nav-link">{{ $t('nav.products') }}</NuxtLink>
+            <NuxtLink :to="localePath('/#market')" class="nav-link">{{ $t('nav.solutions') }}</NuxtLink>
+            <NuxtLink :to="localePath('/#partners')" class="nav-link">{{ $t('nav.partners') }}</NuxtLink>
+            <NuxtLink :to="localePath('/#contact')" class="nav-link">{{ $t('nav.resources') }}</NuxtLink>
           </nav>
           <div class="header-action">
-            <NuxtLink to="/#contact" class="btn btn-primary btn-sm">Partner Details</NuxtLink>
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+              <button class="lang-btn" @click="toggleLangMenu">
+                {{ locale.toUpperCase() }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div v-if="isLangMenuOpen" class="lang-menu">
+                <button 
+                  v-for="loc in locales" 
+                  :key="loc.code" 
+                  @click="switchLanguage(loc.code)"
+                  :class="{'active': locale === loc.code}"
+                >
+                  {{ loc.name }}
+                </button>
+              </div>
+            </div>
+            <NuxtLink :to="localePath('/#contact')" class="btn btn-primary btn-sm">{{ $t('nav.partnerDetails') }}</NuxtLink>
           </div>
         </div>
       </div>
@@ -27,14 +44,19 @@
       <div class="container footer-container">
         <div class="footer-brand">
           <div class="logo">
-            <span class="logo-text">ThePowers</span>
+            <span class="logo-text">ThePower</span>
           </div>
-          <p class="copyright">&copy; 2026 The Powers Infrastructure.</p>
+          <p class="copyright">{{ $t('footer.copyright') }}</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/the-power-uz/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
         </div>
         <div class="footer-links">
-          <NuxtLink to="/privacy" class="footer-link">Privacy Policy</NuxtLink>
-          <NuxtLink to="/terms" class="footer-link">Terms of Service</NuxtLink>
-          <NuxtLink to="/aml-kyc" class="footer-link">AML/KYC Policy</NuxtLink>
+          <NuxtLink to="/privacy" class="footer-link">{{ $t('footer.privacy') }}</NuxtLink>
+          <NuxtLink to="/terms" class="footer-link">{{ $t('footer.terms') }}</NuxtLink>
+          <NuxtLink to="/aml-kyc" class="footer-link">{{ $t('footer.aml') }}</NuxtLink>
         </div>
       </div>
     </footer>
@@ -44,18 +66,40 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const { locale, locales, setLocale } = useI18n()
+const localePath = useLocalePath()
+
 const isScrolled = ref(false)
+const isLangMenuOpen = ref(false)
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 10
 }
 
+const toggleLangMenu = () => {
+  isLangMenuOpen.value = !isLangMenuOpen.value
+}
+
+const switchLanguage = (code) => {
+  setLocale(code)
+  isLangMenuOpen.value = false
+}
+
+// Close language menu on outside click
+const closeMenu = (e) => {
+  if (!e.target.closest('.lang-switcher')) {
+    isLangMenuOpen.value = false
+  }
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('click', closeMenu)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('click', closeMenu)
 })
 </script>
 
@@ -148,6 +192,80 @@ onUnmounted(() => {
   transform: none;
 }
 
+/* Header actions container */
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(2, 197, 35, 0.1);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 130px;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+}
+
+.lang-menu button {
+  background: transparent;
+  border: none;
+  padding: 10px 16px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.lang-menu button:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--color-primary);
+}
+
+.lang-menu button.active {
+  background: rgba(2, 197, 35, 0.1);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .main-content {
   flex: 1;
 }
@@ -170,6 +288,30 @@ onUnmounted(() => {
   margin-top: 10px;
   color: #666;
   font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon {
+  color: #888;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.social-icon:hover {
+  background: #0077b5;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .footer-links {

@@ -1,0 +1,103 @@
+{
+    "nav": {
+        "products": "Products",
+        "solutions": "Solutions",
+        "partners": "Partners",
+        "resources": "Resources",
+        "partnerDetails": "Partner Details"
+    },
+    "footer": {
+        "copyright": "© 2026 The Powers Infrastructure.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "aml": "AML/KYC Policy"
+    },
+    "hero": {
+        "gateway1": "Your Gateway to the",
+        "gateway2": "Uzbek Gaming Market",
+        "headline1": "The perfect infrastructure for the",
+        "headline2": "new era of gaming payments.",
+        "subtitle": "Unified infrastructure and API routing for global digital entertainment. Reach 40M+ users through local payment networks.",
+        "ctaStart": "Start integrating",
+        "ctaDocs": "Docs"
+    },
+    "mockup": {
+        "store": "Store",
+        "offer": "Welcome offer",
+        "pay": "Pay with ThePowers"
+    },
+    "trust": {
+        "subtitle": "Trusted by industry leaders"
+    },
+    "metrics": {
+        "title1": "Explore our",
+        "title2": "latest metrics",
+        "m1Badge": "Market",
+        "m1Title": "Population",
+        "m1Desc": "Young & digital-first demographic ready to spend.",
+        "m2Badge": "Audience",
+        "m2Title": "Active Gamers",
+        "m2Desc": "Rapidly expanding gaming community in the region.",
+        "m3Badge": "Coverage",
+        "m3Title": "Local Cards",
+        "m3Desc": "UZCARD & HUMO — unsupported by global gateways."
+    },
+    "solutions": {
+        "title": "Seamless Solutions",
+        "apiBadge": "API",
+        "apiTitle": "Kiosk API",
+        "apiSubtitle": "(Direct Top-Up)",
+        "apiDesc": "Real-time server-to-server balance funding directly via local e-wallets and cash networks.",
+        "apiLink": "Integration guide →",
+        "apiPill": "Server Integration",
+        "sdkBadge": "SDK",
+        "sdkTitle": "Hosted Checkout",
+        "sdkSubtitle": "(E-Commerce)",
+        "sdkDesc": "Storefront integration allowing users to purchase content via local payment methods with automated USD/EUR settlement.",
+        "sdkLink": "View demo →",
+        "sdkPill": "Download SDK"
+    },
+    "features": {
+        "title1": "Enterprise level",
+        "title2": "Infrastructure",
+        "f1Title": "Full Local Coverage",
+        "f1Desc": "Connect to 100% of the paying audience in Uzbekistan with a single integration. We provide direct access to the most popular payment methods, ensuring you never miss a sale due to checkout friction.",
+        "f1b1": "UZCARD & HUMO native support",
+        "f1b2": "Visa & Mastercard local acquiring",
+        "f1b3": "Digital wallets (Click, Payme, Uzum)",
+        "f2Title": "Instant Cross-Border Settlements",
+        "f2Desc": "Eliminate currency risk and receive your funds faster. Our infrastructure automatically handles local currency conversion, settling your balance in USD or EUR seamlessly.",
+        "f2b1": "Automated UZS to USD/EUR conversion",
+        "f2b2": "Transparent & fixed FX rates",
+        "f2b3": "Flexible payout schedules",
+        "f3Title": "Built for Scale & Reliability",
+        "f3Desc": "An API-first platform architected to handle massive transaction volumes from game launches or viral events without breaking a sweat. Seamlessly plug into the ecosystem.",
+        "f3b1": "99.99% Guaranteed API uptime",
+        "f3b2": "RESTful JSON APIs & Webhooks",
+        "f3b3": "Comprehensive developer SDKs",
+        "f4Title": "Enterprise-Grade Security",
+        "f4Desc": "Focus on growing your game while we handle local financial regulations, tax compliance, and robust fraud prevention across all your transactions.",
+        "f4b1": "Fully PCI DSS Level 1 certified",
+        "f4b2": "AI-powered advanced anti-fraud",
+        "f4b3": "Automated AML & KYC checks"
+    },
+    "contact": {
+        "title": "Ready to scale your presence?",
+        "subtitle": "Get directly in touch with our partnerships team to launch your game in Central Asia.",
+        "hq": "Headquarters",
+        "address": "Elbek str. 24, Tashkent, Uzbekistan, 100000",
+        "email": "Email",
+        "phone": "Phone",
+        "fname": "First Name",
+        "lname": "Last Name",
+        "workEmail": "Work Email",
+        "company": "Company Name",
+        "message": "Tell us about your needs...",
+        "submit": "Submit Request",
+        "sending": "Sending...",
+        "successTitle": "Request Sent!",
+        "successMessage": "Thank you! Your request has been sent to our partnerships team.",
+        "errorTitle": "Error",
+        "errorMessage": "Failed to send request. Please try again later."
+    }
+}

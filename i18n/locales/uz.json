@@ -1,0 +1,103 @@
+{
+    "nav": {
+        "products": "Mahsulotlar",
+        "solutions": "Yechimlar",
+        "partners": "Hamkorlar",
+        "resources": "Resurslar",
+        "partnerDetails": "Hamkor bo'lish"
+    },
+    "footer": {
+        "copyright": "© 2026 The Powers Infratuzilmasi.",
+        "privacy": "Maxfiylik siyosati",
+        "terms": "Foydalanish shartlari",
+        "aml": "AML/KYC siyosati"
+    },
+    "hero": {
+        "gateway1": "O'zbekistonning",
+        "gateway2": "Geyming bozoriga yo'l",
+        "headline1": "O'yin to'lovlari yangi",
+        "headline2": "davri uchun ideal infratuzilma.",
+        "subtitle": "Global raqamli ko'ngilochar uchun yagona to'lov infratuzilmasi va API marshrutlash. Mahalliy tarmoqlar orqali 40+ mln foydalanuvchini qamrab oling.",
+        "ctaStart": "Integratsiyani boshlash",
+        "ctaDocs": "Hujjatlar"
+    },
+    "mockup": {
+        "store": "Do'kon",
+        "offer": "Xush kelibsiz bonusi",
+        "pay": "ThePowers bilan to'lash"
+    },
+    "trust": {
+        "subtitle": "Sohaning yetakchilari tomonidan ishonch bildirilgan"
+    },
+    "metrics": {
+        "title1": "So'nggi ko'rsatkich",
+        "title2": "va statistikalar",
+        "m1Badge": "Bozor",
+        "m1Title": "Aholi",
+        "m1Desc": "To'lashga tayyor yosh va raqamlashtirilgan auditoriya.",
+        "m2Badge": "Auditoriya",
+        "m2Title": "Faol o'yinchilar",
+        "m2Desc": "Mintaqada jadal o'sayotgan o'yin hamjamiyati.",
+        "m3Badge": "Qamrov",
+        "m3Title": "Mahalliy kartalar",
+        "m3Desc": "UZCARD va HUMO — global shlyuzlar tomonidan qamrab olinmagan."
+    },
+    "solutions": {
+        "title": "Uzluksiz Yechimlar",
+        "apiBadge": "API",
+        "apiTitle": "Kiosk API",
+        "apiSubtitle": "(To'g'ridan-to'g'ri to'lov)",
+        "apiDesc": "Mahalliy hamyonlar orqali serverdan serverga real vaqtda to'g'ridan-to'g'ri balansni to'ldirish.",
+        "apiLink": "Qo'llanma →",
+        "apiPill": "Server Integratsiyasi",
+        "sdkBadge": "SDK",
+        "sdkTitle": "Checkout Vitrinasi",
+        "sdkSubtitle": "(E-Tijorat)",
+        "sdkDesc": "Foydalanuvchilarga mahalliy valyutada xarid qilishni ta'minlaydigan vitrina integratsiyasi (USD/EUR bilan ayirboshlash orqali).",
+        "sdkLink": "Dasturni ko'rish →",
+        "sdkPill": "SDK ni yuklash"
+    },
+    "features": {
+        "title1": "Enterprise darajali",
+        "title2": "Infratuzilma",
+        "f1Title": "To'liq Mahalliy Qamrov",
+        "f1Desc": "O'zbekistonning barcha to'lov auditoriyasiga bitta integratsiya orqali ulashing. Eng mashhur mahalliy to'lov usullaridan keng ko'lamli foydalanish.",
+        "f1b1": "UZCARD va HUMO dan to'g'ridan to'g'ri ruxsat",
+        "f1b2": "Visa va Mastercard mahalliy ekvayring",
+        "f1b3": "Raqamli hamyonlar (Click, Payme, Uzum)",
+        "f2Title": "Bir zumda transchegaraviy o'tkazmalar",
+        "f2Desc": "Valyuta xavflarini bartaraf qiling va mablag'laringizni tezroq oling. Bizning infratuzilmamiz mahalliy valyutani avtomat konvertatsiya qiladi.",
+        "f2b1": "UZS dan USD/EUR ga avtomat konvertatsiya",
+        "f2b2": "Shaffof va fiksatsiyalangan kurslar",
+        "f2b3": "Moslashuvchan to'lovlar jadvali",
+        "f3Title": "Masshtablash uchun yaratilgan",
+        "f3Desc": "Buzilishlarsiz virusli o'yinlarning xaridlarini amalga oshiradigan ulkan API arxitekturasi.",
+        "f3b1": "99.99% kafolatlangan vaqt API ish qobiliyati",
+        "f3b2": "RESTful JSON APIs va Webhooks",
+        "f3b3": "To'liq dasturiy ta'minot (SDK)",
+        "f4Title": "Enterprise Darajasidagi Xavfsizlik",
+        "f4Desc": "Faqat loyihani o'stirishga etibor qarating, soliq, hududiy litsenziya va regulyatorlar masalasini yordamchi tarzda ko'radigan mutaxassis qilib The Powers ni oling.",
+        "f4b1": "To'liq PCI DSS Level 1 sertifikati",
+        "f4b2": "AI asosidagi kuchli antifraud tizimi",
+        "f4b3": "Avtomatik AML va KYC qoidalari yechimi"
+    },
+    "contact": {
+        "title": "Loyiha masshtabini kengayishga tayyormisiz?",
+        "subtitle": "Markaziy Osiyo bozorida ishtirok etish uchun mutaxassislarimiz bilan bog'laning.",
+        "hq": "Bosh Ofis",
+        "address": "Elbek ko'chasi, 24, Toshkent, O'zbekiston, 100000",
+        "email": "Bizga yozing",
+        "phone": "Telefon raqam",
+        "fname": "Ismingiz",
+        "lname": "Familiyangiz",
+        "workEmail": "Ishchi Email",
+        "company": "Kompaniya Nomi",
+        "message": "Niyat va maqsadlaringiz...",
+        "submit": "Arizani Yuborish",
+        "sending": "Yuborilmoqda...",
+        "successTitle": "Muvaffaqiyatli Qo'shildi!",
+        "successMessage": "Arizangiz uchun rahmat, tez orada jamoa orqali sizga habar beramiz.",
+        "errorTitle": "Xatolik",
+        "errorMessage": "So'rov yuborilmadi! Iltimos, qayta urunib ko'ring."
+    }
+}

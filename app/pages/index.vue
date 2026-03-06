@@ -5,19 +5,19 @@
       <div class="container hero-container">
         <div class="hero-content gsap-reveal">
           <h1 class="hero-title">
-            <span class="text-dark">Your Gateway to the</span>
+            <span class="text-dark">{{ $t('hero.gateway1') }}</span>
             <br>
-            <span class="text-accent">Uzbek Gaming Market</span>
+            <span class="text-accent">{{ $t('hero.gateway2') }}</span>
           </h1>
         </div>
         
         <div class="hero-card gsap-reveal">
           <div class="hero-card-left">
-            <h2 class="card-headline">The perfect infrastructure for the <br><strong>new era of gaming payments.</strong></h2>
-            <p class="subtitle">Unified infrastructure and API routing for global digital entertainment. Reach 40M+ users through local payment networks.</p>
+            <h2 class="card-headline">{{ $t('hero.headline1') }} <br><strong>{{ $t('hero.headline2') }}</strong></h2>
+            <p class="subtitle">{{ $t('hero.subtitle') }}</p>
             <div class="hero-actions">
-              <NuxtLink to="/#contact" class="btn btn-primary">Start integrating</NuxtLink>
-              <NuxtLink to="/#contact" class="btn btn-outline-light">Docs</NuxtLink>
+              <NuxtLink :to="localePath('/#contact')" class="btn btn-primary">{{ $t('hero.ctaStart') }}</NuxtLink>
+              <NuxtLink :to="localePath('/#contact')" class="btn btn-outline-light">{{ $t('hero.ctaDocs') }}</NuxtLink>
             </div>
           </div>
           <div class="hero-card-right">
@@ -31,13 +31,13 @@
                   </div>
                 </div>
                 <div class="game-store">
-                  <h4>Store</h4>
+                  <h4>{{ $t('mockup.store') }}</h4>
                   <div class="offer-card">
                     <div class="gem-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"></polygon><polygon points="12 22 18 3 12 9 6 3"></polygon><polygon points="2 9 12 9 22 9"></polygon></svg>
                     </div>
-                    <span class="badge badge-green">Welcome offer</span>
-                    <button class="buy-btn">$39.99 <span>Pay with ThePowers</span></button>
+                    <span class="badge badge-green">{{ $t('mockup.offer') }}</span>
+                    <button class="buy-btn">$39.99 <span>{{ $t('mockup.pay') }}</span></button>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
     <!-- Trust & Traction Section -->
     <section id="partners" class="trust gsap-reveal">
       <div class="container">
-        <p class="trust-subtitle">Trusted by industry leaders</p>
+        <p class="trust-subtitle">{{ $t('trust.subtitle') }}</p>
         <div class="trust-logos">
           <span class="logo-placeholder">Tencent</span>
           <span class="logo-placeholder">Xsolla</span>
@@ -66,25 +66,25 @@
     <!-- The Market Opportunity -->
     <section id="market" class="market gsap-reveal section">
       <div class="container">
-        <h2 class="section-title">Explore our <br>latest metrics</h2>
+        <h2 class="section-title">{{ $t('metrics.title1') }} <br>{{ $t('metrics.title2') }}</h2>
         <div class="grid cards-3">
           <div class="metric-card">
-            <div class="metric-badge">Market</div>
+            <div class="metric-badge">{{ $t('metrics.m1Badge') }}</div>
             <h3 class="metric-value">40M</h3>
-            <p class="metric-label">Population</p>
-            <p class="metric-desc">Young & digital-first demographic ready to spend.</p>
+            <p class="metric-label">{{ $t('metrics.m1Title') }}</p>
+            <p class="metric-desc">{{ $t('metrics.m1Desc') }}</p>
           </div>
           <div class="metric-card dark-card">
-            <div class="metric-badge">Audience</div>
+            <div class="metric-badge">{{ $t('metrics.m2Badge') }}</div>
             <h3 class="metric-value text-green">16M+</h3>
-            <p class="metric-label">Active Gamers</p>
-            <p class="metric-desc">Rapidly expanding gaming community in the region.</p>
+            <p class="metric-label">{{ $t('metrics.m2Title') }}</p>
+            <p class="metric-desc">{{ $t('metrics.m2Desc') }}</p>
           </div>
           <div class="metric-card">
-            <div class="metric-badge">Coverage</div>
+            <div class="metric-badge">{{ $t('metrics.m3Badge') }}</div>
             <h3 class="metric-value">93%</h3>
-            <p class="metric-label">Local Cards</p>
-            <p class="metric-desc">UZCARD & HUMO — unsupported by global gateways.</p>
+            <p class="metric-label">{{ $t('metrics.m3Title') }}</p>
+            <p class="metric-desc">{{ $t('metrics.m3Desc') }}</p>
           </div>
         </div>
       </div>
@@ -93,32 +93,32 @@
     <!-- Core Solutions -->
     <section id="solutions" class="solutions section bg-alt">
       <div class="container">
-        <h2 class="section-title text-center">Seamless Solutions</h2>
+        <h2 class="section-title text-center">{{ $t('solutions.title') }}</h2>
         <div class="grid cards-2">
           
           <div class="xcard xcard-light gsap-reveal">
-            <div class="xcard-badge"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></span> API</div>
-            <h3 class="xcard-title">Kiosk API <br>(Direct Top-Up)</h3>
-            <p class="xcard-desc">Real-time server-to-server balance funding directly via local e-wallets and cash networks.</p>
+            <div class="xcard-badge"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></span> {{ $t('solutions.apiBadge') }}</div>
+            <h3 class="xcard-title">{{ $t('solutions.apiTitle') }} <br>{{ $t('solutions.apiSubtitle') }}</h3>
+            <p class="xcard-desc">{{ $t('solutions.apiDesc') }}</p>
             <div class="xcard-actions">
-              <NuxtLink to="/#contact" class="fake-link">Integration guide &rarr;</NuxtLink>
+              <NuxtLink :to="localePath('/#contact')" class="fake-link">{{ $t('solutions.apiLink') }}</NuxtLink>
             </div>
             <!-- decorative floating element -->
             <div class="floating-el el-1">
-              <div class="pill3d">Server Integration</div>
+              <div class="pill3d">{{ $t('solutions.apiPill') }}</div>
             </div>
           </div>
 
           <div class="xcard xcard-dark gsap-reveal">
-            <div class="xcard-badge"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></span> SDK</div>
-            <h3 class="xcard-title">Hosted Checkout <br>(E-Commerce)</h3>
-            <p class="xcard-desc">Storefront integration allowing users to purchase content via local payment methods with automated USD/EUR settlement.</p>
+            <div class="xcard-badge"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></span> {{ $t('solutions.sdkBadge') }}</div>
+            <h3 class="xcard-title">{{ $t('solutions.sdkTitle') }} <br>{{ $t('solutions.sdkSubtitle') }}</h3>
+            <p class="xcard-desc">{{ $t('solutions.sdkDesc') }}</p>
             <div class="xcard-actions">
-              <NuxtLink to="/#contact" class="fake-link text-white">View demo &rarr;</NuxtLink>
+              <NuxtLink :to="localePath('/#contact')" class="fake-link text-white">{{ $t('solutions.sdkLink') }}</NuxtLink>
             </div>
             <!-- decorative floating element -->
             <div class="floating-el el-2">
-              <div class="pill3d pill-green">Download SDK</div>
+              <div class="pill3d pill-green">{{ $t('solutions.sdkPill') }}</div>
             </div>
           </div>
 
@@ -129,54 +129,54 @@
     <!-- Why The Powers? -->
     <section class="features section">
       <div class="container">
-        <h2 class="section-title text-center">Enterprise level <br>Infrastructure</h2>
+        <h2 class="section-title text-center">{{ $t('features.title1') }} <br>{{ $t('features.title2') }}</h2>
         <div class="grid cards-2">
           <div class="feature-card-detailed gsap-reveal">
             <div class="f-icon-box">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
-            <h4 class="feature-title-large">Full Local Coverage</h4>
-            <p class="feature-desc-large">Connect to 100% of the paying audience in Uzbekistan with a single integration. We provide direct access to the most popular payment methods, ensuring you never miss a sale due to checkout friction.</p>
+            <h4 class="feature-title-large">{{ $t('features.f1Title') }}</h4>
+            <p class="feature-desc-large">{{ $t('features.f1Desc') }}</p>
             <ul class="feature-list">
-              <li><span class="check">✓</span> UZCARD & HUMO native support</li>
-              <li><span class="check">✓</span> Visa & Mastercard local acquiring</li>
-              <li><span class="check">✓</span> Digital wallets (Click, Payme, Uzum)</li>
+              <li><span class="check">✓</span> {{ $t('features.f1b1') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f1b2') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f1b3') }}</li>
             </ul>
           </div>
           <div class="feature-card-detailed gsap-reveal">
             <div class="f-icon-box">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" x2="21" y1="14" y2="3"></line><polyline points="8 21 3 21 3 16"></polyline><line x1="20" x2="3" y1="10" y2="21"></line></svg>
             </div>
-            <h4 class="feature-title-large">Instant Cross-Border Settlements</h4>
-            <p class="feature-desc-large">Eliminate currency risk and receive your funds faster. Our infrastructure automatically handles local currency conversion, settling your balance in USD or EUR seamlessly.</p>
+            <h4 class="feature-title-large">{{ $t('features.f2Title') }}</h4>
+            <p class="feature-desc-large">{{ $t('features.f2Desc') }}</p>
             <ul class="feature-list">
-              <li><span class="check">✓</span> Automated UZS to USD/EUR conversion</li>
-              <li><span class="check">✓</span> Transparent & fixed FX rates</li>
-              <li><span class="check">✓</span> Flexible payout schedules</li>
+              <li><span class="check">✓</span> {{ $t('features.f2b1') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f2b2') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f2b3') }}</li>
             </ul>
           </div>
           <div class="feature-card-detailed gsap-reveal">
             <div class="f-icon-box">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
-            <h4 class="feature-title-large">Built for Scale & Reliability</h4>
-            <p class="feature-desc-large">An API-first platform architected to handle massive transaction volumes from game launches or viral events without breaking a sweat. Seamlessly plug into the ecosystem.</p>
+            <h4 class="feature-title-large">{{ $t('features.f3Title') }}</h4>
+            <p class="feature-desc-large">{{ $t('features.f3Desc') }}</p>
             <ul class="feature-list">
-              <li><span class="check">✓</span> 99.99% Guaranteed API uptime</li>
-              <li><span class="check">✓</span> RESTful JSON APIs & Webhooks</li>
-              <li><span class="check">✓</span> Comprehensive developer SDKs</li>
+              <li><span class="check">✓</span> {{ $t('features.f3b1') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f3b2') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f3b3') }}</li>
             </ul>
           </div>
           <div class="feature-card-detailed gsap-reveal">
             <div class="f-icon-box">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             </div>
-            <h4 class="feature-title-large">Enterprise-Grade Security</h4>
-            <p class="feature-desc-large">Focus on growing your game while we handle local financial regulations, tax compliance, and robust fraud prevention across all your transactions.</p>
+            <h4 class="feature-title-large">{{ $t('features.f4Title') }}</h4>
+            <p class="feature-desc-large">{{ $t('features.f4Desc') }}</p>
             <ul class="feature-list">
-              <li><span class="check">✓</span> Fully PCI DSS Level 1 certified</li>
-              <li><span class="check">✓</span> AI-powered advanced anti-fraud</li>
-              <li><span class="check">✓</span> Automated AML & KYC checks</li>
+              <li><span class="check">✓</span> {{ $t('features.f4b1') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f4b2') }}</li>
+              <li><span class="check">✓</span> {{ $t('features.f4b3') }}</li>
             </ul>
           </div>
         </div>
@@ -188,17 +188,20 @@
       <div class="container">
         <div class="contact-box gsap-reveal">
           <div class="contact-left">
-            <h2 class="contact-title">Ready to scale your presence?</h2>
-            <p class="contact-subtitle">Get directly in touch with our partnerships team to launch your game in Central Asia.</p>
+            <h2 class="contact-title">{{ $t('contact.title') }}</h2>
+            <p class="contact-subtitle">{{ $t('contact.subtitle') }}</p>
             <div class="contact-info">
               <div class="contact-item">
-                <p><strong>Headquarters</strong><br>Elbek str. 24, Tashkent,<br>Uzbekistan, 100000</p>
+                <p><strong>{{ $t('contact.hq') }}</strong><br>{{ $t('contact.address') }}</p>
               </div>
               <div class="contact-item mt-4">
-                <p><strong>Email</strong><br><a href="mailto:info@thepower.uz">info@thepower.uz</a></p>
+                <p><strong>{{ $t('contact.email') }}</strong><br><a href="mailto:info@thepower.uz">info@thepower.uz</a></p>
               </div>
               <div class="contact-item mt-4">
-                <p><strong>Phone</strong><br><a href="tel:+998981888888">+998 98 188 88 88</a></p>
+                <p><strong>{{ $t('contact.phone') }}</strong><br><a href="tel:+998981888888">+998 98 188 88 88</a></p>
+              </div>
+              <div class="contact-item mt-4">
+                <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/company/the-power-uz/?viewAsMember=true" target="_blank" rel="noopener noreferrer">The Power UZ</a></p>
               </div>
             </div>
           </div>
@@ -207,23 +210,23 @@
             <form class="lead-form" @submit.prevent="submitForm">
               <div class="form-row">
                 <div class="form-group">
-                  <input type="text" id="fname" required placeholder="First Name" v-model="form.fname" />
+                  <input type="text" id="fname" required :placeholder="$t('contact.fname')" v-model="form.fname" />
                 </div>
                 <div class="form-group">
-                  <input type="text" id="lname" required placeholder="Last Name" v-model="form.lname" />
+                  <input type="text" id="lname" required :placeholder="$t('contact.lname')" v-model="form.lname" />
                 </div>
               </div>
               <div class="form-group">
-                <input type="email" id="email" required placeholder="Work Email" v-model="form.email" />
+                <input type="email" id="email" required :placeholder="$t('contact.workEmail')" v-model="form.email" />
               </div>
               <div class="form-group">
-                <input type="text" id="company" required placeholder="Company Name" v-model="form.company" />
+                <input type="text" id="company" required :placeholder="$t('contact.company')" v-model="form.company" />
               </div>
               <div class="form-group">
-                <textarea id="message" rows="4" placeholder="Tell us about your needs..." required v-model="form.message"></textarea>
+                <textarea id="message" rows="4" :placeholder="$t('contact.message')" required v-model="form.message"></textarea>
               </div>
               <button type="submit" class="btn btn-primary w-full" :disabled="isLoading">
-                {{ isLoading ? 'Sending...' : 'Submit Request' }}
+                {{ isLoading ? $t('contact.sending') : $t('contact.submit') }}
               </button>
             </form>
           </div>
@@ -254,6 +257,9 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const { t } = useI18n()
+const localePath = useLocalePath()
 
 const form = ref({
   fname: '',
@@ -295,10 +301,10 @@ const submitForm = async () => {
       method: 'POST',
       body: form.value
     })
-    displayToast('success', 'Request Sent!', 'Thank you! Your request has been sent to our partnerships team.')
+    displayToast('success', t('contact.successTitle'), t('contact.successMessage'))
     form.value = { fname: '', lname: '', email: '', company: '', message: '' }
   } catch (error) {
-    displayToast('error', 'Error', 'Failed to send request. Please try again later.')
+    displayToast('error', t('contact.errorTitle'), t('contact.errorMessage'))
     console.error(error)
   } finally {
     isLoading.value = false
